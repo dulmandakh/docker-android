@@ -1,0 +1,7 @@
+name: AVD test
+
+jobs:
+    avd:
+        container: reactnativecommunity/react-native-android:1.0.4
+        steps:
+            - run: echo "it works"
