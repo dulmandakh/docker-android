@@ -7,4 +7,4 @@ jobs:
         runs-on: ubuntu-20.04
         container: reactnativecommunity/react-native-android:1.0.4
         steps:
-            - run: echo "it works"
+            - run: avdmanager create avd -n testEmulator -k "system-images;android-19;google_apis;armeabi-v7a"
