@@ -4,6 +4,7 @@ on: push
 
 jobs:
     avd:
+        runs-on: ubuntu-20.04
         container: reactnativecommunity/react-native-android:1.0.4
         steps:
             - run: echo "it works"
