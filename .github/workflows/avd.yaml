@@ -1,5 +1,7 @@
 name: AVD test
 
+on: push
+
 jobs:
     avd:
         container: reactnativecommunity/react-native-android:1.0.4
