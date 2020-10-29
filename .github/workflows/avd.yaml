@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-20.04
         container: reactnativecommunity/react-native-android:1.0.5
         env:
-          ADV_NAME: test
+          AVD_NAME: test
         steps:
             - run: echo no | avdmanager create avd -n $AVD_NAME -k "system-images;android-21;google_apis;armeabi-v7a"
             - run: avdmanager list avd
