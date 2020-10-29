@@ -8,7 +8,7 @@ jobs:
         container: reactnativecommunity/react-native-android:1.0.6
         env:
           AVD_NAME: test
-          ANDROID_SDK_HOME: /github/
+          ANDROID_SDK_HOME: ${{ HOME }}
         steps:
             - run: |
                 echo "HOME=${HOME} ANDROID_AVD_HOME=${ANDROID_AVD_HOME} ANDROID_SDK_HOME=${ANDROID_SDK_HOME}"
