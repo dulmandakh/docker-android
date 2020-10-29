@@ -12,6 +12,7 @@ jobs:
             - run: echo no | avdmanager create avd -n $AVD_NAME -k "system-images;android-21;google_apis;armeabi-v7a"
             - run: avdmanager list avd
             - run: emulator -list-avds
+            - run: emulator $AVD_NAME -no-snapshot -no-window
             # - run: emulator -avd $AVD_NAME -no-snapshot -no-window &
             # - run: adb wait-for-device
             # - run: |
