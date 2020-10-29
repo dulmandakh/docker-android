@@ -8,3 +8,4 @@ jobs:
         container: reactnativecommunity/react-native-android:1.0.5
         steps:
             - run: echo no | avdmanager create avd -n test -k "system-images;android-21;google_apis;armeabi-v7a"
+            - run: avdmanager list avd
