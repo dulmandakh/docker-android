@@ -9,10 +9,11 @@ jobs:
         env:
           AVD_NAME: test
         steps:
-            - run: echo no | avdmanager create avd -n test -k "system-images;android-21;google_apis;armeabi-v7a"
-            - run: avdmanager list avd
-            - run: emulator -list-avds
-            - run: emulator -avd test -no-snapshot -no-window
+            - run: |
+                echo no | avdmanager create avd -n test -k "system-images;android-21;google_apis;armeabi-v7a"
+                avdmanager list avd
+                emulator -list-avds
+                emulator -avd test -no-snapshot -no-window
             # - run: emulator -avd $AVD_NAME -no-snapshot -no-window &
             # - run: adb wait-for-device
             # - run: |
