@@ -6,6 +6,10 @@ jobs:
     avd:
         runs-on: ubuntu-20.04
         container: reactnativecommunity/react-native-android:1.0.5
+        env:
+            ADV_NAME: test
         steps:
-            - run: echo no | avdmanager create avd -n test -k "system-images;android-21;google_apis;armeabi-v7a"
+            - run: echo no | avdmanager create $AVD_NAME -n test -k "system-images;android-21;google_apis;armeabi-v7a"
             - run: avdmanager list avd
+            - run: emulator -avd $AVD_NAME -no-snapshot -no-window &
+            - run: adb wait-for-device $AVD_NAME
