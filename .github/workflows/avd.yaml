@@ -8,9 +8,9 @@ jobs:
         container: reactnativecommunity/react-native-android:1.0.6
         env:
           AVD_NAME: test
-          ANDROID_SDK_HOME: ${{ HOME }}
         steps:
             - run: |
+                export ANDROID_SDK_HOME=$HOME
                 echo "HOME=${HOME} ANDROID_AVD_HOME=${ANDROID_AVD_HOME} ANDROID_SDK_HOME=${ANDROID_SDK_HOME}"
                 echo no | avdmanager create avd -n test -k "system-images;android-21;google_apis;armeabi-v7a"
                 avdmanager list avd
