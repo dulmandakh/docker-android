@@ -5,7 +5,7 @@ on: push
 jobs:
     avd:
         runs-on: ubuntu-20.04
-        container: reactnativecommunity/react-native-android:1.0.5
+        container: reactnativecommunity/react-native-android:1.0.6
         env:
           AVD_NAME: test
         steps:
