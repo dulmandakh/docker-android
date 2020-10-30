@@ -21,8 +21,8 @@ jobs:
                 
                 # The device is now booting, or close to be booted
                 # We just wait until the sys.boot_completed property is set to 1.
-                echo "Waiting for boot.."
                 while [ "$(adb shell getprop sys.boot_completed | tr -d '\r')" != "1" ]; do
+                  echo "Waiting for boot.."
                   sleep 5
                 done
                 
